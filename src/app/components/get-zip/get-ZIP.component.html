@@ -1,0 +1,33 @@
+<div class="container">
+    <form>
+      <div class="form-group">
+        <label for="name">ZIP: </label>
+        <input type="text" name="zip" [(ngModel)]="zip" class="form-control" placeholder="Enter ZIP"/>
+      </div>
+      <button (click)="onGetZIP()" class="btn btn-primary text-center">Search</button>
+    </form>
+    <div>
+      <table *ngIf="zip" class="table">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Address</th>
+          <th scope="col">District</th>
+          <th scope="col">ZIP</th>
+          <th scope="col">City</th>
+          <th scope="col">State</th>
+        </tr>
+        <tr>
+          <td scope="row">#</td>
+          <td>{{ address?.address }}</td>
+          <td>{{ address?.district }}</td>
+          <td>{{ address?.cep }}</td>
+          <td>{{ address?.city }}</td>
+          <td>{{ address?.state }}</td>
+        </tr>
+      </table>
+    </div>
+  
+    <div class="alert alert-danger" role="alert" *ngIf="error">
+      An error occurred when trying to query the zip code: <br> {{ error }}
+    </div>
+  </div>
