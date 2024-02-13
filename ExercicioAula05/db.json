@@ -1,0 +1,36 @@
+{
+  "cliente": [
+    {
+      "nome": "Pablo Rodrigo Silva",
+      "email": "pablo@pablo.com.br",
+      "telefone": "1122558899",
+      "id": 3
+    },
+    {
+      "nome": "luciano oliveira",
+      "email": "luciano@luciano.com",
+      "telefone": "1122559966",
+      "id": 4
+    },
+    {
+      "nome": "asd",
+      "email": "asdas",
+      "telefone": "asd",
+      "id": 5
+    }
+  ],
+  "users": [
+    {
+      "email": "teste@teste.com",
+      "password": "$2a$10$RwwwWR44./uey.JYpsep5OZkpDk8v0SldKbLhZLqXRHU5tXZmdwC2",
+      "name": "Usuário Teste",
+      "roles": [
+        "CADASTRAR_CLIENTE",
+        "EDITAR_CLIENTE",
+        "EXCLUIR_CLIENTE",
+        "LISTAR_CLIENTE"
+      ],
+      "id": 1
+    }
+  ]
+}

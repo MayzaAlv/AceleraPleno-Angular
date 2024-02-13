@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+        <div class="alert alert-primary">
+            Para adicionar um novo cliente <button class="btn btn-primary btn-sm" (click)="onCadatrarCliente()" >clique aqui</button>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>#</th>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Telefone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of cliente">
+            <td>
+                <button class="btn btn-primary btn-sm" (click)="onAtualizarCliente(cliente.id)">Editar</button> &nbsp;
+                <button class="btn btn-danger btn-sm" (click)="onRemoveCliente(template, cliente.id)" >Remover</button>
+            </td>
+            <td>{{ cliente.id }}</td>
+            <td>{{ cliente.nome }}</td>
+            <td>{{ cliente.email }}</td>
+            <td>{{ cliente.telefone }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<ng-template #template>
+  <div class="modal-body text-center">
+    <p>Deseja realmente remover o cliente?</p>
+    <button type="button" class="btn btn-default" (click)="onConfirmaRemover()">Sim</button> &nbsp;
+    <button type="button" class="btn btn-primary" (click)="onDesisteRemover()">Não</button>
+  </div>
+</ng-template>
